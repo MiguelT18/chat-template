@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main
+		class="text-white w-full max-w-[900px] mx-auto border-2 border-gray-400 rounded-2xl bg-sky-900 bg-opacity-50 flex items-center justify-between max-lg:flex-col gap-5 p-6"
+	>
+		<div
+			class="w-full max-lg:text-center h-full flex flex-col justify-center gap-4"
+		>
+			<h1 class="text-xl font-bold uppercase">Chat de los Reales</h1>
+			<p class="max-w-[380px] mx-auto">
+				Este es un chat que solamente se puede acceder si eres un Real. Si no
+				eres un Real, lamentablemente que pena por ti.
+			</p>
+			<a
+				href="/chat"
+				class="w-fit h-fit bg-green-600 px-4 py-2 mt-3 max-lg:mx-auto max-lg:m-0 text-white font-bold rounded-md text-md"
+				>Continuar</a
+			>
+		</div>
+		<img
+			class="w-full max-w-[420px] object-contain rounded-md"
+			src="https://images.unsplash.com/photo-1703100832089-ae79c6f51f88?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			alt="Art"
+		/>
+	</main>
+</Layout>

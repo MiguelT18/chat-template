@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
+import Chats from "../components/Chats.astro";
+---
+
+<Layout title="Main Chat 📫">
+	<main
+		class="text-white bg-sky-900 border-gray-400 border-2 w-full max-w-[900px] mx-auto rounded-2xl bg-opacity-50"
+	>
+		<section class="w-full rounded-xl h-full p-4">
+			<div class="flex flex-col gap-5 pt-2">
+				<div class="flex items-center justify-between">
+					<h1 class="text-3xl uppercase font-bold">Chat</h1>
+					<a href="/">
+						<Icon
+							name="tabler:arrow-back"
+							class="w-[50px] bg-green-600 rounded-full p-1"
+						/>
+					</a>
+				</div>
+
+				<hr class="mb-2" />
+
+				<Chats />
+
+				<form class="flex items-center">
+					<img
+						class="w-full max-w-[50px] rounded-full mr-3"
+						src="https://randomuser.me/api/portraits/lego/6.jpg"
+						alt="user_profile"
+					/>
+
+					<input
+						class="w-full h-fit border-2 border-gray-400 bg-sky-900 text-white text-md placeholder:text-gray-400 focus:placeholder:text-white outline-none rounded-lg p-2"
+						type="text"
+						id="input-message"
+						name="input-message"
+						placeholder="Type a message"
+					/>
+					<button class="w-fit h-fit p-3">
+						<Icon
+							name="ic:baseline-send"
+							class="w-[45px] hover:text-green-600 transition-all"
+						/>
+					</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<style>
+		[astro-icon="mdi:account"] {
+			color: blue;
+			/* OR */
+			fill: blue;
+		}
+	</style>
+</Layout>
